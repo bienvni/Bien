@@ -1,0 +1,51 @@
+<!-- created by bienvni-->
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+
+      <script src= "https://cdn.rawgit.com/skulpt/skulpt-dist/0.11.0/skulpt.min.js"></script>      
+
+      <script src= "https://cdn.rawgit.com/skulpt/skulpt-dist/0.11.0/skulpt-stdlib.js"></script>
+      <script src= script.js></script>
+   </head>
+
+   <body>
+
+     <pre id="prin"></pre>
+     <div id="screen"></div><br />
+     <textarea id="python" 
+               cols="42" rows="20">
+
+print("<h1>Turtle!</h1>")
+print("<h2>circles</h2>")
+import turtle
+
+
+
+screen = turtle.Screen()
+screen.bgcolor("black")
+
+fireworks = turtle.Turtle()
+fireworks.speed(0)
+fireworks.color("red")
+
+number_of_circles = 36
+
+for i in range(number_of_circles):
+    fireworks.circle(100)
+    fireworks.right(360 / number_of_circles)
+
+fireworks.hideturtle()
+screen.mainloop()
+
+screen.update() # Update the screen once drawing is complete
+turtle.done() # Keeps the window open until manually closed
+
+      </textarea>
+      <button onclick="python.style. display=python.style.display=='none' ?'block':'none'">code</button>
+
+   </body>
+<!-- #Just as iron sharpens iron, Bienvni sharpens these skills. -->
+</html>
